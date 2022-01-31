@@ -2,14 +2,7 @@
 
     class TrainCar {
         // Creating TrainCar class member variables
-        // var $type; // if you want to have different types of TrainCars i.e. cargo, engine etc
         var $weight;
-
-        // if you want to have different types of TrainCars i.e. cargo, engine etc
-        // function setType($type){ $this->type = $type; }
-
-        // if you want to have different types of TrainCars i.e. cargo, engine etc
-        // function getType(){ return $this->type; }
 
         function setWeight($weight){ $this->weight = $weight; }
 
@@ -93,17 +86,6 @@
 
     // Step 4. Add the recently created TrainCar to our Train using the addTrainCar() function, and parsing the parameters - (train_car, position)
     $myTrain->addTrainCar($trainCar1->getWeight(), "front");
-
-    // To add more cars you can repeat from Step 2 - Step 4
-
-    // Uncomment the code below to create multiple Train Cars and add them to the Train
-    /* for($i = 0; $i < 10; $i++){
-        $randomWeight = rand(10,150);
-        $newTrainCar = new TrainCar();
-        $newTrainCar->setWeight($randomWeight);
-        $return = $myTrain->addTrainCar($newTrainCar->getWeight(), "back");
-        if($return !== true){ echo $return; break;}
-    } */
 
     // Use this step to "Remove a TrainCar from either end"
     $myTrain->removeTrainCar("front");
