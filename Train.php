@@ -2,24 +2,20 @@
 
     class TrainCar {
         // Creating TrainCar class member variables
-        var $type; // if you want to have different types of TrainCars i.e. cargo, engine etc
+        var $type;
         var $weight;
-        var $new_train_car_obj; // if you want to have different types of TrainCars i.e. cargo, engine etc
-
-        // if you want to have different types of TrainCars i.e. cargo, engine etc
+        var $new_train_car_obj;
+        
         function setType($type){ $this->type = $type; }
 
-        // if you want to have different types of TrainCars i.e. cargo, engine etc
         function getType(){ return $this->type; }
 
         function setWeight($weight){ $this->weight = $weight; }
 
         function getWeight(){ return $this->weight; }
 
-        // if you want to have different types of TrainCars i.e. cargo, engine etc
         function setNewTrainCarObj($type, $weight) { $this->new_train_car_obj = (object) [ "type" => $type, "weight" => $weight ]; }
 
-        // if you want to have different types of TrainCars i.e. cargo, engine etc
         function getNewTrainCarObj() { return $this->new_train_car_obj; }
     }
 
@@ -39,7 +35,7 @@
                 // Checking for the position where to place this current TrainCar
                 if (strtolower($position) == 'front'){
                     // Check if the train cars array is empty so as to push the first TrainCar
-                    empty($this->train_cars) ? $this->train_cars[] = (object)$train_car : array_unshift($this->train_cars, (object)$train_car);
+                    empty($this->train_cars) ? $this->train_cars[] = (object) $train_car : array_unshift($this->train_cars, (object) $train_car);
                     return true;
                 } else if (strtolower($position) == 'back') {
                     array_push($this->train_cars, (object)$train_car);
